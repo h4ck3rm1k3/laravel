@@ -106,7 +106,7 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-
+        'Raahul\LarryFour\LarryFourServiceProvider', # https://github.com/h4ck3rm1k3/larry-four-generator
 	),
 
 	/*

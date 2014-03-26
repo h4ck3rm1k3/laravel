@@ -8,6 +8,21 @@ Laravel aims to make the development process a pleasing one for the developer wi
 
 Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
 
+## Installation 
+
+see http://laravel.com/docs/installation
+
+Install Composer :
+https://github.com/h4ck3rm1k3/composer/
+
+Run Composer install :
+php5 ../composer/bin/composer install
+
+Test :
+php artisan serve
+
+http://localhost:8000/
+
 ## Official Documentation
 
 Documentation for the entire framework can be found on the [Laravel website](http://laravel.com/docs).
