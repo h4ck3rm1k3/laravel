@@ -4,37 +4,75 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 
-    "repositories": [{
-        "type": "package",
-        "package": {
-            "name": "raahul/larryfour",
-            "version": "1.2.3",
-            "version_normalized": "1.2.3.0",
-            "dist": {
-                "type": "tar",
-                "url": "../larry-four-generator/raahul-larryfour-1.2.3.tar",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "classmap": [
-                    "src/"
-                ]
+    "repositories": [
+        
+        {
+            "type": "package",       
+            "package": {
+                "name": "way/generators",
+                "description": "",
+                "version": "1.2.3",
+                "license": "MIT",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:h4ck3rm1k3/Laravel-4-Generators.git",
+                    "reference" : "HEAD"
+                },
+                
+                "require": {
+                    "php": ">=5.4.0",
+                    "illuminate/support": "~4.1"
+                },
+                "require-dev": {
+                    "phpspec/phpspec": "2.0.*@dev",
+                    "behat/behat": "v2.5.1",
+                    "behat/mink": "v1.5.0",
+                    "behat/mink-extension": "*",
+                    "behat/mink-goutte-driver": "*",
+                    "behat/mink-selenium2-driver": "*",
+                    "phpunit/phpunit": "3.*"
+                },
+                "autoload": {
+                    "psr-0": {
+                        "Way\\Generators": "src/"
+                    }
+                }               
+            }
+        },
+            
+        {
+            "type": "package",       
+            "package": {
+                "name": "raahul/larryfour",
+                "version": "1.2.3",
+                "version_normalized": "1.2.3.0",
+                "dist": {
+                    "type": "tar",
+                    "url": "../larry-four-generator/raahul-larryfour-1.2.3.tar",
+                    "reference": null,
+                    "shasum": null
+                },
+                "type": "library",
+                "installation-source": "dist",
+                "autoload": {
+                    "classmap": [
+                        "src/"
+                    ]
+                }
             }
         }
-    }
         
     ],
 
     "require": {
+
 	"laravel/framework": "4.1.*",
         "illuminate/support": "4.*",
         "illuminate/console": "4.*",
         "illuminate/filesystem": "4.*",
         "raahul/schema-extractor": "1.*",
-        "raahul/larryfour": "1.2.3"
+        "raahul/larryfour": "1.2.3", 
+        "way/generators" : "1.2.3"
 	},
 	"autoload": {
 		"classmap": [
@@ -62,5 +100,8 @@
 	"config": {
 		"preferred-install": "dist"
 	},
-	"minimum-stability": "stable"
+	"minimum-stability": "stable",
+	"require-dev": {
+		"way/generators": "1.2.3"
+	}
 }

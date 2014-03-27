@@ -107,8 +107,9 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
         'Raahul\LarryFour\LarryFourServiceProvider', # https://github.com/h4ck3rm1k3/larry-four-generator
+        'Way\Generators\GeneratorsServiceProvider', # https://github.com/h4ck3rm1k3/Laravel-4-Generators
 	),
-
+    
 	/*
 	|--------------------------------------------------------------------------
 	| Service Provider Manifest

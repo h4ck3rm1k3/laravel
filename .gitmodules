@@ -1,0 +1,3 @@
+[submodule "vendor_lib/Laravel4Generators"]
+	path = vendor_lib/Laravel4Generators
+	url = git@github.com:h4ck3rm1k3/Laravel-4-Generators.git
