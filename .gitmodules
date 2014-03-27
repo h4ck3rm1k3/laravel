@@ -1,3 +1,6 @@
 [submodule "vendor_lib/Laravel4Generators"]
 	path = vendor_lib/Laravel4Generators
 	url = git@github.com:h4ck3rm1k3/Laravel-4-Generators.git
+[submodule "/mnt/data/home/mdupont/experiments/laravel_/laravel/vendor/way/generators"]
+	path = /mnt/data/home/mdupont/experiments/laravel_/laravel/vendor/way/generators
+	url = git@github.com:h4ck3rm1k3/Laravel-4-Generators.git

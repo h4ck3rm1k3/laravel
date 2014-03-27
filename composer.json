@@ -46,11 +46,10 @@
                 "name": "raahul/larryfour",
                 "version": "1.2.3",
                 "version_normalized": "1.2.3.0",
-                "dist": {
-                    "type": "tar",
-                    "url": "../larry-four-generator/raahul-larryfour-1.2.3.tar",
-                    "reference": null,
-                    "shasum": null
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:h4ck3rm1k3/larry-four-generator.git",
+                    "reference": "HEAD"
                 },
                 "type": "library",
                 "installation-source": "dist",
