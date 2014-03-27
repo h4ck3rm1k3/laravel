@@ -4,6 +4,16 @@ use Illuminate\Console\Command;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
+class DBAdaptor {
+	public $path = 'test';
+};
+
+class ProjectAdaptor {
+    public function execute() {
+        print ("proj exec"); 
+    }
+};
+ 
 class bake extends Command {
 
 	/**
@@ -28,6 +38,7 @@ class bake extends Command {
 	public function __construct()
 	{
 		parent::__construct();
+
 	}
 
 	/**
@@ -40,6 +51,13 @@ class bake extends Command {
 		print("fire:\n");
         $model = $this->argument('model');
         print("Model: $model\n");
+        $s = new BakeShell();
+		$s->DbConfig = new DBAdaptor();
+		$s->Project = new ProjectAdaptor();
+        $s->Model = new ModelTask();
+        $s->Model->execute();
+        #$s->main();
+
 	}
 
 	/**
