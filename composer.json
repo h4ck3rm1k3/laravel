@@ -1,13 +1,14 @@
 {
-	"name": "laravel/laravel",
-	"description": "The Laravel Framework.",
-	"keywords": ["framework", "laravel"],
-	"license": "MIT",
-
+    "name": "laravel/laravel",
+    "description": "The Laravel Framework.",
+    "keywords": [
+        "framework",
+        "laravel"
+    ],
+    "license": "MIT",
     "repositories": [
-        
         {
-            "type": "package",       
+            "type": "package",
             "package": {
                 "name": "way/generators",
                 "description": "",
@@ -16,9 +17,8 @@
                 "source": {
                     "type": "git",
                     "url": "git@github.com:h4ck3rm1k3/Laravel-4-Generators.git",
-                    "reference" : "HEAD"
+                    "reference": "HEAD"
                 },
-                
                 "require": {
                     "php": ">=5.4.0",
                     "illuminate/support": "~4.1"
@@ -36,12 +36,35 @@
                     "psr-0": {
                         "Way\\Generators": "src/"
                     }
-                }               
+                }
             }
         },
-            
+        
+
         {
-            "type": "package",       
+            "type": "package",
+            "package": {
+                "name": "cake/cake",
+                "version": "2.6.0",
+                "source": {
+                    "type": "git",
+                    "url": "git@github.com:h4ck3rm1k3/cakephp.git",
+                    "reference": "HEAD"
+                },
+                "type": "library",
+                "installation-source": "dist",
+                "autoload": {
+                    "classmap": [
+                        "lib/",
+                        "app/"
+                    ]
+                }
+            }
+        },        
+
+
+        {
+            "type": "package",
             "package": {
                 "name": "raahul/larryfour",
                 "version": "1.2.3",
@@ -60,47 +83,45 @@
                 }
             }
         }
-        
     ],
-
     "require": {
-
-	"laravel/framework": "4.1.*",
+        "laravel/framework": "4.1.*",
         "illuminate/support": "4.*",
         "illuminate/console": "4.*",
         "illuminate/filesystem": "4.*",
         "raahul/schema-extractor": "1.*",
-        "raahul/larryfour": "1.2.3", 
-        "way/generators" : "1.2.3"
-	},
-	"autoload": {
-		"classmap": [
-			"app/commands",
-			"app/controllers",
-			"app/models",
-			"app/database/migrations",
-			"app/database/seeds",
-			"app/tests/TestCase.php"
-		]
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-update-cmd": [
-			"php artisan clear-compiled",
-			"php artisan optimize"
-		],
-		"post-create-project-cmd": [
-			"php artisan key:generate"
-		]
-	},
-	"config": {
-		"preferred-install": "dist"
-	},
-	"minimum-stability": "stable",
-	"require-dev": {
-		"way/generators": "1.2.3"
-	}
+        "raahul/larryfour": "1.2.3",
+        "way/generators": "1.2.3",
+        "cake/cake": "2.6"
+    },
+    "autoload": {
+        "classmap": [
+            "app/commands",
+            "app/controllers",
+            "app/models",
+            "app/database/migrations",
+            "app/database/seeds",
+            "app/tests/TestCase.php"
+        ]
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-update-cmd": [
+            "php artisan clear-compiled",
+            "php artisan optimize"
+        ],
+        "post-create-project-cmd": [
+            "php artisan key:generate"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "require-dev": {
+        "way/generators": "1.2.3"
+    }
 }

@@ -11,14 +11,14 @@ class bake extends Command {
 	 *
 	 * @var string
 	 */
-	protected $name = 'command:name';
+	protected $name = 'command:bake';
 
 	/**
 	 * The console command description.
 	 *
 	 * @var string
 	 */
-	protected $description = 'Command description.';
+	protected $description = 'Porting of cake bake for model creation.';
 
 	/**
 	 * Create a new command instance.
@@ -37,7 +37,9 @@ class bake extends Command {
 	 */
 	public function fire()
 	{
-		//
+		print("fire:\n");
+        $model = $this->argument('model');
+        print("Model: $model\n");
 	}
 
 	/**
@@ -48,7 +50,7 @@ class bake extends Command {
 	protected function getArguments()
 	{
 		return array(
-			array('example', InputArgument::REQUIRED, 'An example argument.'),
+			array('model', InputArgument::REQUIRED, 'bake model.'),
 		);
 	}
 
@@ -60,7 +62,6 @@ class bake extends Command {
 	protected function getOptions()
 	{
 		return array(
-			array('example', null, InputOption::VALUE_OPTIONAL, 'An example option.', null),
 		);
 	}
 
